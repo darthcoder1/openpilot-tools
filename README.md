@@ -17,6 +17,7 @@ Table of Contents
    * [Debug car controls](#debug-car-controls)
    * [Stream replayed CAN messages to EON](#stream-replayed-can-messages-to-eon)
    * [Stream EON video data to a PC](#stream-eon-video-data-to-a-pc)
+   * [Install on Xavier (yaak.ai)](#install-openpilot-on-AGX-Xavier)
  * [Welcomed contributions](#welcomed-contributions)
 <!--te-->
 
@@ -282,6 +283,24 @@ python streamer/streamerd.py
 ```
 
 ![Imgur](stream.gif)
+
+Install openpilot on AGX Xavier
+-------------
+
+- clone or copy this repository to the target device
+- ssh into the target
+- switch into the directory that should contain all sourcecode (ex. `~/repos/`)
+- Install the dependencies by running `./xavier/install_dependencies.sh`
+- Install openpilot or chffrplus
+```
+# openpilot
+$ ./xavier/install_openpilot.sh
+
+# chffrplus
+$ ./xavier/install_chffrplus.sh
+```
+
+**Hardware needed**: Nvidia AGX Xavier
 
 
 Welcomed contributions
